@@ -27,4 +27,5 @@
 ###  **Note**: 
 - Ta hoàn toàn có thể truyền các lệnh khác nhau như trong bản PDF trong file 'File_tutorial' đã hướng dẫn ở phần 'Pump Chain Commands', muốn chạy lệnh nào ta chỉ việc gán câu lệnh đó cho biến input trong file 'InfuseCode.py' và màn hình hiển thị của máy bơm không nhất thiết phải thay đổi khi ta tác động tới máy bơm bằng phần mềm.
 ## Result: 
-- Máy vi bơm chạy đúng theo lệnh
+- Máy vi bơm chạy đúng theo lệnh, bơm dừng khi đạt đủ thể tích quy định trong code
+https://user-images.githubusercontent.com/86046279/218251351-7db3a79d-f0f4-414e-b3eb-4df8a288c10d.mp4
