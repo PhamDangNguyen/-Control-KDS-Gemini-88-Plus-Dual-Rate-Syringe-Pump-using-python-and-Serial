@@ -1,0 +1,27 @@
+*  Đặt chế độ syringe rút/truyền bằng tay
+* Cài đặt xy lanh (mục syr)
+    - Nhập 'input2 = 'syr ab ?'.encode()' để xem có thể setup thông số của Syringe nào
+    - Việc nhập 'syr<sp><code><sp><index>' hoặc 'syr<sp>{a|b|ab}<sp><code><sp><index>' sẽ chọn ống tiêm trong chỉ mục <index> của danh sách các ống tiêm được liên kết với nhà sản xuất được xác định bởi <code>. (input = 'syr ab sst 1'.encode()#vaochedo)
+* Cài đặt thể tích ống (svolume<sp>{a|b|ab}[<sp>{syringe volume} {ul|ml}])
+    - svolume<sp>ab<sp>5<sp>ul (ống a và b đều 5ul với Independent Condition)
+    - svolume<sp>10<sp>ml (chế độ khác Independent Condition thì chỉ cần thế này sẽ set cả 2 ống)
+* Cài đặt đường kính ống:
+    - 'diameter<sp>{a|b|ab}[<sp>{syringe diameter}]' với Independent Condition
+    - VD: diameter<sp>a<sp>4.85 đơn vị hiểu là mm
+* Đặt thời gian mục tiêu - TTIME:
+    - 'ttime[<sp>{a|b|ab}<sp>{target time}]' với Independent Condition - VD: ttime<sp>ab<sp>30<sp>sec
+    - ttime<sp>10<sp>min với chế độ còn lại
+* Cài đặt thể tích mục tiêu đạt được - TVOLUME:
+    - 'tvolume<sp>{a|b|ab}[<sp>{targetvolume}<sp>{volume units}]' với Independent Condition - VD: tvolume<sp>ab<sp>5<sp>ul
+    -'tvolume<sp>10<sp>ml'với các chế độ còn lại
+* Cài đặt tốc độ truyền:
+    - 'irate<sp>{a|b|ab}[<sp>max|min|lim|<rate><sp>{rate units}]' với Independent Condition
+        ví dụ: irate<sp>ab<sp>10<sp>ml/min
+    - 'irate[<sp>[max|min|lim|<rate><sp>{rate units}]]' với chế độ còn lại
+        ví dụ: irate<sp>10<sp>ml/min
+* Chạy pump: 
+    - run<sp>{a|b|ab} - chạy theo hướng hiện tại với Independent Condition
+    - 'run' với các chế độ còn lại.
+* Truyền lệnh 'status' để xem trạng thái các pump
+* STOP PUPM:
+    - 'stop<sp>{a|b|ab}' với Independent Condition còn các chế độ còn lại chỉ cần truyên 'stop'
